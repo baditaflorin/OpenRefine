@@ -181,8 +181,10 @@ ClusteringDialog.prototype._renderTable = function(clusters) {
             for (var c = 0; c < choices.length; c++) {
                 var choice = choices[c];
                 var li = $('<li></li>');
-                $('<a href="javascript:{}" title='+$.i18n._('core-dialogs')["use-this-val"]+'></a>').text(choice.v).click(onClick).appendTo(li);
-                $('<span></span>').text("(" + choice.c + " rows)").addClass("clustering-dialog-entry-count").appendTo(li);
+               /* hide the next line to get better performance. In OpenRefine, the biggest bottleneck is the browser 
+               $('<a href="javascript:{}" title='+$.i18n._('core-dialogs')["use-this-val"]+'></a>').text(choice.v).click(onClick).appendTo(li); */
+                // add choice.v to the next line so i can still see what i cluster
+                $('<span></span>').text(/* hidden "(" hidden */ choice.v + " " + choice.c + " rows)").addClass("clustering-dialog-entry-count").appendTo(li);
                 rowCount += choice.c;
                 facet.s[c] = {
                     "v": {
