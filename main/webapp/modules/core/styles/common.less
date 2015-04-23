@@ -390,6 +390,7 @@ div.input-container > input, div.input-container > textarea {
   margin-left: -3px;
   margin-top: -3px;
   vertical-align: top;
+  overflow: hidden; // the scroll rendeding causes a crash on firefox, in paste history when trying to paste a JSON bigger them 200 MB 
   }
 
 input.code, textarea.code {
