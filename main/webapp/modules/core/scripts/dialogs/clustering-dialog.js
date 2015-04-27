@@ -3,7 +3,7 @@
 Copyright 2010, Google Inc.
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
+Redistribution and use in source and binary forms, with or without7
 modification, are permitted provided that the following conditions are
 met:
 
@@ -226,7 +226,7 @@ ClusteringDialog.prototype._renderTable = function(clusters) {
                 editCheck.attr("checked", "true");
             }
             
-            var input = $('<input type="text" size="75" />') // Display long chung of text , so you don`t have to scroll
+            var input = $('<input type="text" size="50" />') // Display long chung of text , so you don`t have to scroll
                 .attr("value", cluster.value)
                 .bind("keyup change input",function() {
                     cluster.value = this.value;
