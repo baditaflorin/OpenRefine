@@ -226,7 +226,7 @@ ClusteringDialog.prototype._renderTable = function(clusters) {
                 editCheck.attr("checked", "true");
             }
             
-            var input = $('<input type="text" size="25" />')
+            var input = $('<input type="text" size="75" />') // Display long chung of text , so you don`t have to scroll
                 .attr("value", cluster.value)
                 .bind("keyup change input",function() {
                     cluster.value = this.value;
